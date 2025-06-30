@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+langchain
+chromadb
+redis
+pydantic
+httpx
+python-dotenv
+groq 
