@@ -1,0 +1,8 @@
+Q: How do I reset my password?
+A: Go to the login page and click 'Forgot password'.
+
+Q: My computer is slow. What should I do?
+A: Try restarting your computer and closing unused programs.
+
+Q: How do I connect to Wi-Fi?
+A: Click the Wi-Fi icon and select your network. 

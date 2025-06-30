@@ -1,8 +1,14 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from app.utils.faq_loader import load_faq
+from app.services.chroma_service import add_faqs_to_chroma, query_chroma
 
 app = FastAPI(title="IT Technical Support Chatbot API")
+
+# Load FAQ at startup
+faq_list = load_faq('data/it_faq.txt')
+add_faqs_to_chroma(faq_list)
 
 app.add_middleware(
     CORSMiddleware,
@@ -24,5 +30,8 @@ def health_check():
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(req: ChatRequest):
-    # TODO: still to connect it with real RAG/LLM logic
-    return {"response": f"Bot received: {req.message}"} 
+    # Use ChromaDB to find the closest answer
+    result = query_chroma(req.message)
+    if result:
+        return {"response": result}
+    return {"response": "Sorry, I don't know the answer to that yet."} 
