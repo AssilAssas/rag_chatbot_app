@@ -1,8 +1,14 @@
+import os
+from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.utils.faq_loader import load_faq
 from app.services.chroma_service import add_faqs_to_chroma, query_chroma
+from app.services.groq_llm import ask_groq_llm
+
+# Load environment variables (for GROQ_API_KEY)
+load_dotenv()
 
 app = FastAPI(title="IT Technical Support Chatbot API")
 
@@ -30,8 +36,10 @@ def health_check():
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(req: ChatRequest):
-    # Use ChromaDB to find the closest answer
-    result = query_chroma(req.message)
-    if result:
-        return {"response": result}
+    # Use ChromaDB to find the closest answer (context)
+    context = query_chroma(req.message)
+    if context:
+        # Use Groq LLM to generate a helpful answer using the context
+        answer = ask_groq_llm(req.message, context)
+        return {"response": answer}
     return {"response": "Sorry, I don't know the answer to that yet."} 
