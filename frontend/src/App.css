@@ -234,4 +234,85 @@ button {
     font-size: 0.99rem;
     padding: 8px 10px;
   }
+}
+
+/* Login Page Styles */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f8cff 0%, #a6c1ee 100%);
+}
+
+.login-form {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #4f8cff;
+  text-align: center;
+}
+
+.login-form input {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-form button {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button:hover {
+  background: #357ae8;
+}
+
+.login-error {
+  color: #e74c3c;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Chat Header and Logout Button Styles */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #4f8cff;
+  color: #fff;
+  border-radius: 12px 12px 0 0;
+}
+
+.logout-btn {
+  background: #fff;
+  color: #4f8cff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.logout-btn:hover {
+  background: #e0e0e0;
+  color: #357ae8;
 } 

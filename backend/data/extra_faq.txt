@@ -1,0 +1,5 @@
+Q: How do I install new software?
+A: Contact IT support or use the company's software portal if available.
+
+Q: My screen is frozen. What should I do?
+A: Try pressing Ctrl+Alt+Del and select Task Manager to close unresponsive programs. 
