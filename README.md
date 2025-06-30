@@ -1,6 +1,6 @@
 # IT Technical Support Chatbot (RAG-powered)
 
-A production-ready, Retrieval-Augmented Generation (RAG) chatbot specialized in IT technical support. Built with FastAPI, LangChain, ChromaDB, Groq LLM, and a modern React (Next.js) frontend.
+A production-ready, Retrieval-Augmented Generation (RAG) chatbot specialized in IT technical support. Built with FastAPI, LangChain, ChromaDB, Groq LLM, and a modern React frontend.
 
 ## Features
 - RAG architecture with semantic and hybrid search
@@ -9,7 +9,7 @@ A production-ready, Retrieval-Augmented Generation (RAG) chatbot specialized in 
 - User personalization and session management
 - Multimodal support (text, images, documents)
 - Source citation and confidence scoring
-- Responsive, modern UI (Next.js, Tailwind, shadcn/ui)
+- Responsive, modern UI (React, CSS, shadcn/ui)
 
 ## Project Structure
 ```
@@ -22,7 +22,6 @@ chatbot-project/
 │   ├── src/
 │   ├── public/
 │   └── package.json
-├── docs/
 ├── data/
 └── README.md
 ```
@@ -46,11 +45,9 @@ chatbot-project/
    cd frontend
    npm install
    ```
-2. **Run Next.js dev server:**
+2. **Run React dev server:**
    ```bash
    npm run dev
    ```
 
 ---
-
-For full documentation, see the `docs/` directory. 
