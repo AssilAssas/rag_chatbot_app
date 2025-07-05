@@ -20,10 +20,31 @@ const SendIcon = ({ disabled }: { disabled: boolean }) => (
   </svg>
 );
 
-const Avatar = ({ sender }: { sender: 'user' | 'bot' }) => (
-  <div className={sender === 'user' ? 'avatar user-avatar' : 'avatar bot-avatar'}>
-    {sender === 'user' ? 'U' : 'B'}
+const UserAvatar = () => (
+  <div className="avatar user-avatar">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="18" r="18" fill="#6366f1"/>
+      <path d="M18 18c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm0 3c-4.418 0-12 2.21-12 6.6V30h24v-2.4c0-4.39-7.582-6.6-12-6.6z" fill="#fff"/>
+    </svg>
   </div>
+);
+
+const BotAvatar = () => (
+  <div className="avatar bot-avatar">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="18" r="18" fill="#fbbf24"/>
+      <rect x="10" y="14" width="16" height="10" rx="5" fill="#fff"/>
+      <rect x="14" y="10" width="8" height="8" rx="4" fill="#fff"/>
+      <circle cx="15.5" cy="19" r="1.5" fill="#6366f1"/>
+      <circle cx="20.5" cy="19" r="1.5" fill="#6366f1"/>
+    </svg>
+  </div>
+);
+
+const LogoutIcon = () => (
+  <svg className="logout-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 17l5-5-5-5M21 12H9M13 21H5a2 2 0 01-2-2V5a2 2 0 012-2h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
 );
 
 function formatTime(date: Date) {
@@ -163,8 +184,15 @@ function Chat({ username, onLogout }: { username: string; onLogout: () => void }
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <span>Welcome, {username}</span>
-        <button className="logout-btn" onClick={onLogout}>Logout</button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <UserAvatar />
+          <span style={{ fontWeight: 600, fontSize: '1.1rem' }}>
+            👋 Welcome back, {username.charAt(0).toUpperCase() + username.slice(1)}!
+          </span>
+        </div>
+        <button className="logout-btn" onClick={onLogout} title="Logout" aria-label="Logout" style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
+          <LogoutIcon />
+        </button>
       </div>
       <div className="chat-box" ref={chatBoxRef}>
         {messages.length === 0 && (
@@ -174,7 +202,7 @@ function Chat({ username, onLogout }: { username: string; onLogout: () => void }
         )}
         {messages.map((msg, idx) => (
           <div key={idx} className={msg.sender === 'user' ? 'user-msg msg-row' : 'bot-msg msg-row'}>
-            {msg.sender === 'bot' && <Avatar sender="bot" />}
+            {msg.sender === 'bot' && <BotAvatar />}
             <div className="msg-text">
               {msg.text}
               {msg.timestamp && (
@@ -183,12 +211,12 @@ function Chat({ username, onLogout }: { username: string; onLogout: () => void }
                 </div>
               )}
             </div>
-            {msg.sender === 'user' && <Avatar sender="user" />}
+            {msg.sender === 'user' && <UserAvatar />}
           </div>
         ))}
         {loading && (
           <div className="bot-msg msg-row">
-            <Avatar sender="bot" />
+            <BotAvatar />
             <div className="msg-text typing-indicator">
               <span>Bot is typing</span>
               <span className="typing-dots">...</span>

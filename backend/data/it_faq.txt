@@ -6,3 +6,30 @@ A: Try restarting your computer and closing unused programs.
 
 Q: How do I connect to Wi-Fi?
 A: Click the Wi-Fi icon and select your network. 
+
+Q: My password expired. How can I set a new one?
+A: Follow the password reset instructions on the login page or contact IT support for assistance.
+
+Q: How do I update my installed software?
+A: Use the company software portal or contact IT support for help with updates.
+
+Q: I can't connect to the network. What should I do?
+A: Check if your Wi-Fi is enabled and you are within range. Try restarting your router or contacting IT support if the issue persists.
+
+Q: What should I do to keep my computer secure?
+A: Regularly update your software, use strong passwords, and avoid clicking on suspicious links or attachments. 
+
+Q: How do I access my work computer remotely?
+A: Use the company-approved remote desktop software and connect via VPN. Contact IT for setup instructions.
+
+Q: Do I need to complete IT security training?
+A: Yes, all employees are required to complete annual IT security training. Check your email or the intranet for details.
+
+Q: Is my laptop encrypted?
+A: Most company laptops are encrypted by default. Contact IT to confirm your device's encryption status.
+
+Q: I lost my company device. What should I do?
+A: Report the loss to IT immediately so they can secure your data and assist with recovery or replacement.
+
+Q: Can I install any software I want on my work computer?
+A: Only approved software may be installed. Contact IT for a list of approved applications or to request new software. 

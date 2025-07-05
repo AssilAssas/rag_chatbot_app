@@ -2,4 +2,31 @@ Q: How do I install new software?
 A: Contact IT support or use the company's software portal if available.
 
 Q: My screen is frozen. What should I do?
-A: Try pressing Ctrl+Alt+Del and select Task Manager to close unresponsive programs. 
+A: Try pressing Ctrl+Alt+Del and select Task Manager to close unresponsive programs.
+
+Q: I can't print my document. What should I do?
+A: Check if the printer is turned on and connected. Make sure you have selected the correct printer. If the problem persists, restart the printer or contact IT support.
+
+Q: How do I connect to the company VPN?
+A: Open the VPN client, enter your credentials, and click 'Connect'. If you have trouble, verify your internet connection or contact IT support.
+
+Q: I received a suspicious email. What should I do?
+A: Do not click any links or download attachments. Report the email to IT security immediately.
+
+Q: My mouse/keyboard is not working. What should I check?
+A: Ensure the device is properly connected. Try unplugging and reconnecting it, or replacing the batteries if wireless.
+
+Q: How do I set up my computer for remote work?
+A: Ensure you have VPN access, required software installed, and a secure internet connection. Contact IT for remote desktop setup if needed.
+
+Q: What is multi-factor authentication and how do I enable it?
+A: Multi-factor authentication adds an extra layer of security. Enable it in your account settings or contact IT for assistance.
+
+Q: How do I request a new software license?
+A: Submit a request through the IT service portal or email IT support with your requirements.
+
+Q: My company phone is not receiving emails. What should I do?
+A: Check your network connection, ensure your email app is configured correctly, and restart your phone. If issues persist, contact IT support.
+
+Q: Where can I find the company's IT policies?
+A: IT policies are available on the company intranet or by contacting the IT department. 

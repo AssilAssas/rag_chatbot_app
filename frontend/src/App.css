@@ -315,4 +315,12 @@ button {
 .logout-btn:hover {
   background: #e0e0e0;
   color: #357ae8;
+}
+
+.logout-btn .logout-icon {
+  color: #1e3a8a; /* Dark blue */
+  transition: color 0.2s;
+}
+.logout-btn:hover .logout-icon {
+  color: #2563eb; /* Lighter blue on hover */
 } 
