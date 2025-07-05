@@ -81,7 +81,12 @@ function Login({ onLogin }: { onLogin: (username: string) => void }) {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h2>IT Support Chatbot Login</h2>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24, gap: 12 }}>
+          <span style={{ fontSize: 44 }}>🤖</span>
+          <h2 style={{ fontWeight: 700, fontSize: '1.6rem', color: '#1e3a8a', margin: 0, letterSpacing: 1 }}>
+            Welcome
+          </h2>
+        </div>
         <input
           type="text"
           placeholder="Username"

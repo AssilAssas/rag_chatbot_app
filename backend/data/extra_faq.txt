@@ -29,4 +29,16 @@ Q: My company phone is not receiving emails. What should I do?
 A: Check your network connection, ensure your email app is configured correctly, and restart your phone. If issues persist, contact IT support.
 
 Q: Where can I find the company's IT policies?
-A: IT policies are available on the company intranet or by contacting the IT department. 
+A: IT policies are available on the company intranet or by contacting the IT department.
+
+Q: Hello
+A: Hello! How can I assist you today?
+
+Q: Hi
+A: Hi there! How can I help you with your IT needs?
+
+Q: Bonjour
+A: Bonjour! Comment puis-je vous aider aujourd'hui ?
+
+Q: Hey
+A: Hey! What IT question can I help you with? 
